@@ -1,12 +1,13 @@
 <section>
-    <form class="container">
+    <form class="container" #f="ngForm" ngModel (ngSubmit)="onSubmit(f)" name="fieldName" ngDefaultControl>
         <mat-form-field>
             <mat-label>Email</mat-label>
-            <input type="email" matInput placeholder="example@example.com">
+            <input type="email" matInput placeholder="example@example.com" ngModel name="email">
         </mat-form-field>
         <mat-form-field>
             <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="*********">
+            <input type="password" matInput placeholder="*********" ngModel name="password">
         </mat-form-field>
+        <button type="submit" mat-raised-button color="primary">Submit</button>
     </form>
 </section>
