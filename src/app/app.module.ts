@@ -13,6 +13,8 @@ import { PastTrainingsComponent } from './training/past-trainings/past-trainings
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,10 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    MatNativeDateModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MatDatepickerModule, {provide: MAT_DATE_LOCALE, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
