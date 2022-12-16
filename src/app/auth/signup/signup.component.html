@@ -13,8 +13,8 @@
             <mat-error>has to be at least 6 characters long.</mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill">
-            <mat-label>Choose a date</mat-label>
-            <input matInput [matDatepicker]="picker">
+            <mat-label>Your birthday</mat-label>
+            <input matInput [matDatepicker]="picker" [max]="maxDate">
             <mat-hint>DD/MM/YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
