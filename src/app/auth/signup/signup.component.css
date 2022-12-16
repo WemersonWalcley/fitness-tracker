@@ -6,6 +6,10 @@
     width: 100vw;
 }
 
+.datePicker, .checkBox, .submitButton{
+    margin-top: 15px;
+}
+
 ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
     background-color: transparent;
     width: 280px;
