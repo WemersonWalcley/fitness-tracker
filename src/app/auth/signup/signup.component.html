@@ -1,5 +1,5 @@
 <section>
-    <form class="container" #f="ngForm" ngModel (ngSubmit)="onSubmit(f)" name="fieldName" ngDefaultControl>
+    <form class="container" #f="ngForm" ngModel (ngSubmit)="onSubmit(f)" name="form" ngDefaultControl>
         <mat-form-field>
             <mat-label>Email</mat-label>
             <input type="email" matInput placeholder="example@example.com" ngModel name="email" email required
@@ -9,10 +9,10 @@
         </mat-form-field>
         <mat-form-field hintLabel="Should be at least 6 characters long.">
             <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="*********" ngModel name="password" required minlength="6"
+            <input type="password" matInput placeholder="******" ngModel name="password" required minlength="6"
                 #pwInput="ngModel">
             <mat-hint align="end">{{pwInput.value?.length}} / 6</mat-hint>
-            <mat-error>has to be at least 6 characters long.</mat-error>
+            <mat-error>Has to be at least 6 characters long.</mat-error>
         </mat-form-field>
         <mat-form-field class="datePicker" appearance="fill">
             <mat-label>Your birthday</mat-label>
